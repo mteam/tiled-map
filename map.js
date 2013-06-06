@@ -1,4 +1,5 @@
-var find = require('find');
+var find = require('find'),
+    TileLayer = require('./tile_layer.js');
 
 module.exports = Map;
 
@@ -27,6 +28,16 @@ Map.prototype = {
 
   getTileset: function(name) {
     return find(this.tilesets, { name: name });
+  },
+
+  predraw: function() {
+    var tiles = this.tiles;
+
+    this.layers.forEach(function(layer) {
+      if (layer instanceof TileLayer) {
+        layer.predraw(tiles);
+      }
+    });
   }
 
 };
