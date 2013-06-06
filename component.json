@@ -1,0 +1,17 @@
+{
+  "name": "tiled-map",
+  "repo": "mteam/tiled-map",
+  "version": "0.1.0",
+  "dependencies": {
+    "component/find": "*",
+    "mteam/canvas": "*",
+    "mteam/grid": "*",
+    "mteam/spritesheet": "*"
+  },
+  "scripts": [
+    "index.js",
+    "map.js",
+    "object_layer.js",
+    "tile_layer.js"
+  ]
+}
