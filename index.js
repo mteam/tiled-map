@@ -16,7 +16,7 @@ exports.load = function(json, images) {
     tilelayer: function(lr) {
       return new TileLayer(lr.name, grid.clone(lr.width, lr.height), lr.data);
     },
-    objectlayer: function(lr) {
+    objectgroup: function(lr) {
       return new ObjectLayer(lr.name, lr.objects);
     }
   };
