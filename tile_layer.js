@@ -11,13 +11,19 @@ function TileLayer(name, grid, data) {
 TileLayer.prototype = {
 
   predraw: function(tiles) {
-    var data = this.data,
-        canvas = this.canvas,
-        i = 0;
+    var canvas = this.canvas;
+
+    this.iterate(function(x, y, id) {
+      id > 0 && tiles[id].draw(canvas.ctx, x, y);
+    });
+  },
+
+  iterate: function(fn) {
+    var data = this.data;
+    var i = 0;
 
     this.grid.iterate(function(x, y) {
-      var id = data[i++];
-      id > 0 && tiles[id].draw(canvas.ctx, x, y);
+      fn(x, y, data[i++]);
     });
   }
 
