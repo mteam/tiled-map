@@ -1,7 +1,7 @@
 {
   "name": "tiled-map",
   "repo": "mteam/tiled-map",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "component/find": "*",
     "mteam/canvas": "*",
