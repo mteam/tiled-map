@@ -27,7 +27,8 @@ exports.load = function(json, images) {
   });
 
   json.tilesets.forEach(function(ts) {
-    var sheet = new Spritesheet(images[ts.name], ts.tilewidth, ts.tileheight);
+    var opts = { width: ts.tilewidth, height: ts.tileheight };
+    var sheet = new Spritesheet(images[ts.name], opts);
     map.addTileset(sheet, ts.firstgid);
   });
 
