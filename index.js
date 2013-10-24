@@ -10,7 +10,7 @@ exports.load = function(json, images) {
     json.tilewidth, json.tileheight
   );
 
-  var map = new Map(grid);
+  var map = new Map(grid, json.properties);
 
   var factories = {
     tilelayer: function(lr) {

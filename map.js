@@ -3,8 +3,9 @@ var find = require('find'),
 
 module.exports = Map;
 
-function Map(grid) {
+function Map(grid, props) {
   this.grid = grid;
+  this.properties = props;
   this.layers = [];
   this.tilesets = [];
   this.tiles = {};
