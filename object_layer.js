@@ -2,9 +2,10 @@ var find = require('find');
 
 module.exports = ObjectLayer;
 
-function ObjectLayer(name, objects) {
+function ObjectLayer(name, objects, props) {
   this.name = name;
   this.objects = objects;
+  this.props = props;
 }
 
 ObjectLayer.prototype = {

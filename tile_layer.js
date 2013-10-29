@@ -1,9 +1,10 @@
 var Canvas = require('canvas');
 
-function TileLayer(name, grid, data) {
+function TileLayer(name, grid, data, props) {
   this.name = name;
   this.grid = grid;
   this.data = data;
+  this.props = props;
 
   this.canvas = Canvas.fromSize(grid.total.width, grid.total.height);
 }

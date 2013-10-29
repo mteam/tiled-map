@@ -14,10 +14,16 @@ exports.load = function(json, images) {
 
   var factories = {
     tilelayer: function(lr) {
-      return new TileLayer(lr.name, grid.clone(lr.width, lr.height), lr.data);
+      return new TileLayer(
+        lr.name, grid.clone(lr.width, lr.height),
+        lr.data, lr.properties || {}
+      );
     },
     objectgroup: function(lr) {
-      return new ObjectLayer(lr.name, lr.objects);
+      return new ObjectLayer(
+        lr.name, lr.objects,
+        lr.properties || {}
+      );
     }
   };
 
