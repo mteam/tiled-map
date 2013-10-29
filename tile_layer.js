@@ -10,6 +10,8 @@ function TileLayer(name, grid, data) {
 
 TileLayer.prototype = {
 
+  type: 'tile',
+
   predraw: function(tiles) {
     var canvas = this.canvas;
 

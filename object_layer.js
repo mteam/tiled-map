@@ -9,6 +9,8 @@ function ObjectLayer(name, objects) {
 
 ObjectLayer.prototype = {
 
+  type: 'object',
+
   name: function(name) {
     return find(this.objects, { name: name });
   },
